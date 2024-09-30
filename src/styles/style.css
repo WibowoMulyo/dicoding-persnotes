@@ -1,0 +1,253 @@
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #4caf50;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Menambahkan box-sizing */
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Karakter Tersisa */
+/* Indikasi Karakter Tersisa */
+.character-count {
+  text-align: center; /* Menempatkan teks di tengah */
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px; /* Mengurangi jarak atas agar tidak terlalu jauh */
+  margin-bottom: 15px; /* Memberikan sedikit ruang di bawah */
+}
+
+/* Note List & Note Item */
+.note-list {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Memberikan jarak antar catatan */
+}
+
+.note-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex; /* Menjadikan elemen flex */
+  flex-direction: column; /* Mengatur kolom */
+}
+
+.note-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.note-item h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.note-item p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.note-item small {
+  display: block;
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Note Actions */
+.note-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end; /* Mengatur agar tombol berada di sebelah kanan */
+}
+
+.note-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.note-actions button:first-child {
+  background-color: #ff5722;
+  color: white;
+}
+
+.note-actions button:first-child:hover {
+  background-color: #e64a19;
+}
+
+.note-actions button:last-child {
+  background-color: #4caf50;
+  color: white;
+}
+
+.note-actions button:last-child:hover {
+  background-color: #45a049;
+}
+
+/* Search Bar */
+input[type="text"] {
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Empty State */
+.empty-message {
+  font-size: 1.5rem; /* Ukuran font yang lebih besar */
+  color: #ff5722; /* Warna yang menarik perhatian */
+  text-align: center; /* Menempatkan teks di tengah */
+  padding: 10px; /* Menambahkan padding */
+  background-color: rgba(
+    255,
+    87,
+    34,
+    0.1
+  ); /* Latar belakang dengan transparansi */
+  border: 2px dashed #ff5722; /* Garis putus-putus untuk menonjolkan area */
+  border-radius: 10px; /* Sudut yang membulat */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .note-item {
+    display: flex; /* Flexbox untuk tata letak yang lebih baik */
+    flex-direction: row; /* Mengatur tata letak dalam satu baris */
+    justify-content: space-between; /* Mengatur spasi antara judul dan aksi */
+    align-items: center; /* Memastikan semua item rata secara vertikal */
+    padding: 15px; /* Mengurangi padding agar terlihat lebih rapi */
+  }
+
+  .note-item h3 {
+    font-size: 1.8rem;
+    margin: 0; /* Menghilangkan margin untuk konsistensi */
+    flex: 1; /* Memberikan ruang untuk judul catatan */
+  }
+
+  .note-item p {
+    font-size: 1.1rem;
+    max-width: 60%; /* Mengatur batas maksimum untuk teks */
+    margin: 0; /* Menghilangkan margin untuk konsistensi */
+  }
+
+  .note-item small {
+    font-size: 1rem;
+  }
+
+  .note-actions {
+    margin-left: 20px; /* Memberikan jarak antara teks dan tombol */
+  }
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #282c35;
+  color: white;
+}
+
+body.dark-mode .App {
+  background-color: #3b3f47;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode .note-item {
+  background-color: #555;
+  color: white;
+  border-color: #666;
+}
+
+body.dark-mode input[type="text"]:focus {
+  border-color: #4caf50;
+}
